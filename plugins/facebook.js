@@ -71,7 +71,7 @@ async function fbDownloader(fbUrl) {
 let handler = async (m, { conn, text }) => {
   if (!text)
     return m.reply(
-      "Please enter a Facebook link first, for example:\n.fb https://facebook.com/..."
+      "Please enter a Facebook link first, for example:\n.facebook https://facebook.com/..."
     );
 
   try {
@@ -101,7 +101,7 @@ let handler = async (m, { conn, text }) => {
 
 handler.help = ["facebook"];
 handler.tags = ["downloader"];
-handler.command = /^fb|facebook|fbdl$/i;
+handler.command = ["facebook"];
 handler.limit = false;
 
 export default handler;
